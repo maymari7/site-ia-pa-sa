@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>TEC MODERNA</h1>
+    </header>
+
+    <section class="blocos">
+        <div class="bloco" onclick="toggleConteudo(this)">
+            <h2>IAAS</h2>
+            <p class="conteudo">IaaS oferece infraestrutura de TI virtualizada sob demanda, incluindo servidores, armazenamento, redes e sistemas operacionais. Os usuários têm controle total sobre os recursos, podendo instalar e gerenciar seus próprios sistemas operacionais e aplicações.
+                <br>
+                <b>Exemplo:</b> Amazon Web Services (AWS) EC2, Google Compute Engine, Microsoft Azure.</p>
+        </div>
+        <div class="bloco" onclick="toggleConteudo(this)">
+            <h2>PAAS</h2>
+            <p class="conteudo">PaaS fornece uma plataforma que permite aos desenvolvedores criar, testar e implantar aplicações rapidamente sem se preocupar com a infraestrutura subjacente. Inclui ferramentas de desenvolvimento, bancos de dados, servidores de aplicação, e ambientes de execução.
+                <br>
+                <b>Exemplo:</b> Google App Engine, Microsoft Azure App Service, Heroku.</p>
+        </div>
+        <div class="bloco" onclick="toggleConteudo(this)">
+            <h2>SAAS</h2>
+            <p class="conteudo">SaaS oferece software acessível via internet, geralmente através de um navegador. Os usuários não precisam instalar ou manter o software, pois ele é gerenciado pelo provedor de serviços. É o modelo mais comum para aplicativos de negócios e consumidores.
+                <br>
+                <b>Exemplo:</b> Gmail, Microsoft Office 365, Salesforce.</p>
+        </div>
+    </section>
+    
+
+    <footer>
+        <p>&copy; 2024 Tec Moderna</p>
+    </footer>
+
+    <script>
+        function toggleConteudo(element) {
+            const conteudo = element.querySelector('.conteudo');
+            if (conteudo.style.maxHeight) {
+                conteudo.style.maxHeight = null;
+            } else {
+                conteudo.style.maxHeight = conteudo.scrollHeight + "px";
+            }
+        }
+    </script>
+
+</body>
+</html>
